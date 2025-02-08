@@ -31,5 +31,6 @@ private:
     Size GetActualSize() const;
 
     std::vector<std::vector<std::unique_ptr<Cell>>> cells_;
+    GraphInterface graph_;
     CacheInterface cache_;
 };
