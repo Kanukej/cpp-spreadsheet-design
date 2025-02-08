@@ -12,7 +12,7 @@ public:
     void Set(std::string text);
     void Clear();
 
-    Value GetValue() const override;
+    Value GetValue(CacheInterface& cache) const override;
     std::string GetText() const override;
 
 private:
