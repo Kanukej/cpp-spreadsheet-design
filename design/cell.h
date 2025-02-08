@@ -6,6 +6,7 @@
 class Cell : public CellInterface {
 public:
     Cell();
+    explicit Cell(std::string text);
     ~Cell();
 
     void Set(std::string text);
