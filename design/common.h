@@ -157,7 +157,8 @@ public:
     void AddNode(const Position& pos, const std::vector<Position>& inputs);
     void DelNode(const Position& pos);
     std::vector<Position> GetDependencies() const;  
-private: 
+private:
+    bool CheckDependencies(const Position& new_pos); 
     std::unordered_map<Position, Node> graph_;
 };
 
