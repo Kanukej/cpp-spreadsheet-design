@@ -3,6 +3,7 @@
 #include "cell.h"
 #include "common.h"
 
+#include <unordered_map>
 #include <functional>
 
 class Sheet : public SheetInterface {
@@ -30,7 +31,7 @@ private:
                     const std::function<void(const CellInterface&)>& printCell) const;
     Size GetActualSize() const;
 
-    std::vector<std::vector<std::unique_ptr<Cell>>> cells_;
+    std::unordered_map<Position, std::unique_ptr<Cell>> cells_;
     GraphInterface graph_;
     CacheInterface cache_;
 };
