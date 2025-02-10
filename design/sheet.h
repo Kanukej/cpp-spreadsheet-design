@@ -32,6 +32,6 @@ private:
     Size GetActualSize() const;
 
     std::unordered_map<Position, std::unique_ptr<Cell>> cells_;
-    GraphInterface graph_;
-    CacheInterface cache_;
+    GraphInterface graph_; //Объявлен в common.h
+    CacheInterface cache_; //Объявлен в common.h
 };
